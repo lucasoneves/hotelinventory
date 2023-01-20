@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./rooms.component.sass']
 })
 export class RoomsComponent {
-  hotelName = "Hilton Hotel"
+  hotelName = "Hilton Hotel";
+  numberOfRooms = 20
 }
