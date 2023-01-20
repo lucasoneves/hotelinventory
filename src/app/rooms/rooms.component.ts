@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Room } from './rooms';
 
 @Component({
   selector: 'app-rooms',
@@ -11,5 +12,11 @@ export class RoomsComponent {
   hideRooms = false;
   toggle() {
     this.hideRooms = !this.hideRooms
+  }
+  rooms: Room = {
+    id: 1,
+    totalRooms: 20,
+    available: 10,
+    bookedRooms: 10
   }
 }
