@@ -1,6 +1,11 @@
 <p>Welcome to {{ hotelName }}</p>
-<div [hidden]="hideRooms">
+<div if="hideRooms">
   Number of rooms
-  <div [innerText]="numberOfRooms"></div>
+  <div *ngIf="numberOfRooms > 0">{{ numberOfRooms }}</div>
 </div>
+
+<div *ngFor="let room in roomList">
+  Room: {{ room.price }}
+</div>
+
 <button (click)="toggle()">Log message</button>
