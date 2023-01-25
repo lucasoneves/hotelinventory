@@ -1,11 +1,14 @@
-<p>Welcome to {{ hotelName }}</p>
+<p [ngStyle]="{color: 'green'}">Welcome to {{ hotelName }}</p>
 <div if="hideRooms">
   Number of rooms
   <div *ngIf="numberOfRooms > 0">{{ numberOfRooms }}</div>
 </div>
 
-<div *ngFor="let room in roomList">
-  Room: {{ room.price }}
+<div [ngClass]="e ? 'even' : 'odd'" *ngFor="let room of roomList; let e=even; let o=odd; let i=index">
+  <h2>Room: {{ room.price }}</h2>
+  <span>Type: {{ room.roomType }}</span>
+  <p>Even/Odd: {{ e ? "Even" : "Odd" }}</p>
+  <p>Index: {{ i }}</p>
 </div>
 
-<button (click)="toggle()">Log message</button>
+<!-- <button (click)="toggle()">Log message</button> -->
