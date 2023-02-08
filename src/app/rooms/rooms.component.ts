@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Room, RoomsList } from './rooms';
 
 @Component({
@@ -7,6 +7,7 @@ import { Room, RoomsList } from './rooms';
   styleUrls: ['./rooms.component.sass'],
 })
 export class RoomsComponent {
+  @Input() rooms: RoomsList[] = []
   hotelName = 'Hilton Hotel';
   numberOfRooms = 20;
   hideRooms = false;
