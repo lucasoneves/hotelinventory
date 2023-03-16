@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let course of courses" (click)="selectCourse(course)">
+    {{ course.title }} - by {{ course.teacher }}
+    <button (click)="deleteCourse(course); $event.stopImmediatePropagation()">
+      Delete
+    </button>
+  </li>
+</ul>
+
+<h2>Curso selecionado</h2>
+<pre *ngIf="selectedCourse">{{ selectedCourse | json }}</pre>
