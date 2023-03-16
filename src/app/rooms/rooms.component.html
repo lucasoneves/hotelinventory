@@ -1,0 +1,9 @@
+<p [ngStyle]="{color: 'green'}">Welcome to {{ hotelName }}</p>
+<div if="hideRooms">
+  Number of rooms
+  <div *ngIf="numberOfRooms > 0">{{ roomList.length }}</div>
+</div>
+
+
+
+<!-- <button (click)="toggle()">Log message</button> -->
